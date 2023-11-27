@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.11.0](https://github.com/codesandbox/sandpack/compare/v2.10.0...v2.11.0) (2023-11-27)
+
+### Features
+
+- Added showResetButton prop ([#1044](https://github.com/codesandbox/sandpack/issues/1044)) ([d7c2679](https://github.com/codesandbox/sandpack/commit/d7c2679fbc61dee6d486cb6d4ec33a77a8f30589))
+
 # [2.10.0](https://github.com/codesandbox/sandpack/compare/v2.9.0...v2.10.0) (2023-11-15)
 
 ### Bug Fixes
