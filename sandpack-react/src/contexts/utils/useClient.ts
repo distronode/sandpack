@@ -89,6 +89,12 @@ export const useClient: UseClient = (
   /**
    * Refs
    */
+  type InterserctionObserverCallback = (
+    entries: IntersectionObserverEntry[]
+  ) => void;
+  const intersectionObserverCallback = useRef<
+    InterserctionObserverCallback | undefined
+  >();
   const intersectionObserver = useRef<IntersectionObserver | null>(null);
   const lazyAnchorRef = useRef<HTMLDivElement>(null);
   const registeredIframes = useRef<
@@ -233,6 +239,16 @@ export const useClient: UseClient = (
     setState((prev) => ({ ...prev, error: null, status: "running" }));
   }, [createClient]);
 
+  intersectionObserverCallback.current = (
+    entries: IntersectionObserverEntry[]
+  ): void => {
+    if (entries.some((entry) => entry.isIntersecting)) {
+      runSandpack();
+    } else {
+      unregisterAllClients();
+    }
+  };
+
   const initializeSandpackIframe = useCallback((): void => {
     const autorun = options?.autorun ?? true;
 
@@ -252,9 +268,13 @@ export const useClient: UseClient = (
       // If any component registered a lazy anchor ref component, use that for the intersection observer
       intersectionObserver.current = new IntersectionObserver((entries) => {
         if (entries.some((entry) => entry.isIntersecting)) {
-          runSandpack();
+          // Trigger it once
+          if (
+            entries.some((entry) => entry.isIntersecting) &&
+            lazyAnchorRef.current
+          ) {
+            intersectionObserverCallback.current?.(entries);
 
-          if (lazyAnchorRef.current) {
             intersectionObserver.current?.unobserve(lazyAnchorRef.current);
           }
         }
@@ -263,12 +283,7 @@ export const useClient: UseClient = (
       intersectionObserver.current.observe(lazyAnchorRef.current);
     } else if (lazyAnchorRef.current && state.initMode === "user-visible") {
       intersectionObserver.current = new IntersectionObserver((entries) => {
-        if (entries.some((entry) => entry.isIntersecting)) {
-          runSandpack();
-        } else {
-          Object.keys(clients.current).map(unregisterBundler);
-          unregisterAllClients();
-        }
+        intersectionObserverCallback.current?.(entries);
       }, observerOptions);
 
       intersectionObserver.current.observe(lazyAnchorRef.current);
@@ -310,9 +325,9 @@ export const useClient: UseClient = (
       client.iframe.contentWindow?.location.replace("about:blank");
       client.iframe.removeAttribute("src");
       delete clients.current[clientId];
+    } else {
+      delete registeredIframes.current[clientId];
     }
-
-    delete registeredIframes.current[clientId];
 
     if (timeoutHook.current) {
       clearTimeout(timeoutHook.current);
@@ -349,6 +364,10 @@ export const useClient: UseClient = (
 
       setState((prev) => ({ ...prev, error: null }));
     } else if (msg.type === "action" && msg.action === "show-error") {
+      if (timeoutHook.current) {
+        clearTimeout(timeoutHook.current);
+      }
+
       setState((prev) => ({ ...prev, error: extractErrorDetails(msg) }));
     } else if (
       msg.type === "action" &&
@@ -367,7 +386,7 @@ export const useClient: UseClient = (
   };
 
   const recompileMode = options?.recompileMode ?? "delayed";
-  const recompileDelay = options?.recompileDelay ?? 500;
+  const recompileDelay = options?.recompileDelay ?? 200;
 
   const dispatchMessage = (
     message: SandpackMessage,

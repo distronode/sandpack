@@ -3,6 +3,107 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.8](https://github.com/codesandbox/sandpack/compare/v2.13.7...v2.13.8) (2024-04-11)
+
+### Bug Fixes
+
+- force new release ([#1118](https://github.com/codesandbox/sandpack/issues/1118)) ([5b38b37](https://github.com/codesandbox/sandpack/commit/5b38b372de2d9ff26967fec1e22c772c755a0d33))
+
+## [2.13.7](https://github.com/codesandbox/sandpack/compare/v2.13.6...v2.13.7) (2024-03-26)
+
+### Bug Fixes
+
+- Fixed sandpackNode initializing failure ([#1105](https://github.com/codesandbox/sandpack/issues/1105)) ([26685d9](https://github.com/codesandbox/sandpack/commit/26685d92973ab609bae03dadca4d7f21c1fd696c))
+
+## [2.13.6](https://github.com/codesandbox/sandpack/compare/v2.13.5...v2.13.6) (2024-03-25)
+
+### Bug Fixes
+
+- **docs:** update file explorer props table ([#1100](https://github.com/codesandbox/sandpack/issues/1100)) ([09403e9](https://github.com/codesandbox/sandpack/commit/09403e952e2380b0e55b482b785cab2a8b8fb751))
+- **pro:** use partitioned cookie for sandpack authentication ([#1110](https://github.com/codesandbox/sandpack/issues/1110)) ([2950186](https://github.com/codesandbox/sandpack/commit/29501863c2ebbcbf64fb9e7080feed1f2bc724b5))
+
+## [2.13.5](https://github.com/codesandbox/sandpack/compare/v2.13.4...v2.13.5) (2024-02-28)
+
+### Bug Fixes
+
+- make sure to unregister all clients when "user-visible" option is out of viewport ([#1098](https://github.com/codesandbox/sandpack/issues/1098)) ([230960c](https://github.com/codesandbox/sandpack/commit/230960c1dafd74d7e5e578865cb0b27526152e07))
+
+## [2.13.4](https://github.com/codesandbox/sandpack/compare/v2.13.3...v2.13.4) (2024-02-27)
+
+### Bug Fixes
+
+- update intersection callback ref every time prop change ([#1096](https://github.com/codesandbox/sandpack/issues/1096)) ([4fb3d7c](https://github.com/codesandbox/sandpack/commit/4fb3d7c5a8ba701f30fa0506eb27c246d4197de8))
+
+## [2.13.3](https://github.com/codesandbox/sandpack/compare/v2.13.2...v2.13.3) (2024-02-27)
+
+### Bug Fixes
+
+- investigating scroll issue ([#1094](https://github.com/codesandbox/sandpack/issues/1094)) ([b994287](https://github.com/codesandbox/sandpack/commit/b994287a5ffc0b3a6bdcb7f857a46f34e97ed039))
+
+## [2.13.2](https://github.com/codesandbox/sandpack/compare/v2.13.1...v2.13.2) (2024-02-24)
+
+### Bug Fixes
+
+- **compile opts:** don't overwrite default properties ([#1090](https://github.com/codesandbox/sandpack/issues/1090)) ([2877fcf](https://github.com/codesandbox/sandpack/commit/2877fcf46be7579a20d793b5ebb746e63622fb74))
+
+## [2.13.1](https://github.com/codesandbox/sandpack/compare/v2.13.0...v2.13.1) (2024-02-23)
+
+### Bug Fixes
+
+- **timeout:** clear it when there is a syntax error ([#1087](https://github.com/codesandbox/sandpack/issues/1087)) ([6777c24](https://github.com/codesandbox/sandpack/commit/6777c241f2d04b709e778543fe4afd9f79d3b514))
+
+# [2.13.0](https://github.com/codesandbox/sandpack/compare/v2.12.1...v2.13.0) (2024-02-22)
+
+### Features
+
+- Add spread operator for options in runtime client ([#1086](https://github.com/codesandbox/sandpack/issues/1086)) ([b7c7551](https://github.com/codesandbox/sandpack/commit/b7c7551472e42723a70db7cbf7af853810dfd9d3))
+
+## [2.12.1](https://github.com/codesandbox/sandpack/compare/v2.12.0...v2.12.1) (2024-02-12)
+
+### Bug Fixes
+
+- Theme state logic to account for non-prefers-color-scheme usage ([#1082](https://github.com/codesandbox/sandpack/issues/1082)) ([3fcd51d](https://github.com/codesandbox/sandpack/commit/3fcd51d1f1cae45030d1903a419fae3f7af0367d))
+
+### Features
+
+- Private NPM guidance update ([#1079](https://github.com/codesandbox/sandpack/issues/1079)) ([40ad726](https://github.com/codesandbox/sandpack/commit/40ad726a2016e2156b0030444ae9a91b749fdc42))
+
+# [2.12.0](https://github.com/codesandbox/sandpack/compare/v2.11.3...v2.12.0) (2024-02-05)
+
+### Features
+
+- sandpack template type ([#1075](https://github.com/codesandbox/sandpack/issues/1075)) ([db8eba7](https://github.com/codesandbox/sandpack/commit/db8eba7d7810896948e29067ac6606388e31c5e2))
+
+## [2.11.3](https://github.com/codesandbox/sandpack/compare/v2.11.2...v2.11.3) (2024-01-17)
+
+### Bug Fixes
+
+- Update CodeMirror View when autoReload changed ([#1059](https://github.com/codesandbox/sandpack/issues/1059)) ([782c0c7](https://github.com/codesandbox/sandpack/commit/782c0c713af7e4c8181236c128b7df7ec6c6433a))
+
+## [2.11.2](https://github.com/codesandbox/sandpack/compare/v2.11.1...v2.11.2) (2024-01-11)
+
+### Bug Fixes
+
+- bump codesandbox-client and test new publish script ([#1056](https://github.com/codesandbox/sandpack/issues/1056)) ([1736185](https://github.com/codesandbox/sandpack/commit/173618538584f11426c7b2156243bc1691303696))
+
+## [2.11.1](https://github.com/codesandbox/sandpack/compare/v2.11.0...v2.11.1) (2024-01-10)
+
+### Bug Fixes
+
+- add `allow-downloads` to iframes ([#1054](https://github.com/codesandbox/sandpack/issues/1054)) ([c038e13](https://github.com/codesandbox/sandpack/commit/c038e1322bbca94ea529f7a92089ad0f605d1ba5))
+
+# [2.11.0](https://github.com/codesandbox/sandpack/compare/v2.10.0...v2.11.0) (2024-01-03)
+
+### Bug Fixes
+
+- Update git user configuration ([#1051](https://github.com/codesandbox/sandpack/issues/1051)) ([7144ed4](https://github.com/codesandbox/sandpack/commit/7144ed46370c6f0b6740c4fb2be0e2a0a3781c0b))
+- Update git user settings ([#1052](https://github.com/codesandbox/sandpack/issues/1052)) ([cc88156](https://github.com/codesandbox/sandpack/commit/cc8815624a9505747ee66a8aa2c0dc46eae8f4ee))
+
+### Features
+
+- Added showResetButton prop ([#1044](https://github.com/codesandbox/sandpack/issues/1044)) ([d7c2679](https://github.com/codesandbox/sandpack/commit/d7c2679fbc61dee6d486cb6d4ec33a77a8f30589))
+- improve system color scheme support and documentation ([#1050](https://github.com/codesandbox/sandpack/issues/1050)) ([23d513c](https://github.com/codesandbox/sandpack/commit/23d513cf9f81e240053768084178ce2e850711b3))
+
 # [2.10.0](https://github.com/codesandbox/sandpack/compare/v2.9.0...v2.10.0) (2023-11-15)
 
 ### Bug Fixes

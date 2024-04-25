@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import * as themes from "@codesandbox/sandpack-themes";
 import React from "react";
 
 import { Sandpack } from "./";
@@ -9,37 +8,34 @@ export default {
 };
 
 export const Basic: React.FC = () => {
-  return <Sandpack template="vite" theme={themes.sandpackDark} />;
+  return (
+    <div style={{ height: "400vh" }}>
+      <Sandpack
+        files={{
+          "/App.js": `export default function TodoList() {
+            return (
+              // This doesn't quite work!
+              <h1>Hedy Lamarr's Todos</h1>
+              <img
+                src="https://i.imgur.com/yXOvdOSs.jpg"
+                alt="Hedy Lamarr"
+                class="photo"
+              >
+              <ul>
+                <li>Invent new traffic lights
+                <li>Rehearse a movie scene
+                <li>Improve spectrum technology
+              </ul>
+            );
+          }
+          `,
+        }}
+        options={{
+          initMode: "user-visible",
+          bundlerURL: "https://786946de.sandpack-bundler-4bw.pages.dev",
+        }}
+        template="react"
+      />
+    </div>
+  );
 };
-
-export const EslintBasic = () => (
-  <Sandpack
-    files={{
-      "/.eslintrc.js": `module.exports = {
-  rules: { 
-    "no-unused-vars": "error",
-    "no-console": "error",
-  },
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module'
-  },
-}`,
-      "/index.js": `const helloWorld = "";
-
-console.log("foo");`,
-
-      "/package.json": JSON.stringify({
-        devDependencies: {
-          eslint: "^8.0.1",
-        },
-        scripts: { start: "eslint index.js" },
-      }),
-    }}
-    options={{
-      visibleFiles: ["/index.js", "/.eslintrc.js"],
-      showConsole: true,
-    }}
-    template="node"
-  />
-);

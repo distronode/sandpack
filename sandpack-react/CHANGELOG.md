@@ -3,6 +3,85 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.8](https://github.com/codesandbox/sandpack/compare/v2.13.7...v2.13.8) (2024-04-11)
+
+**Note:** Version bump only for package @codesandbox/sandpack-react
+
+## [2.13.7](https://github.com/codesandbox/sandpack/compare/v2.13.6...v2.13.7) (2024-03-26)
+
+**Note:** Version bump only for package @codesandbox/sandpack-react
+
+## [2.13.6](https://github.com/codesandbox/sandpack/compare/v2.13.5...v2.13.6) (2024-03-25)
+
+**Note:** Version bump only for package @codesandbox/sandpack-react
+
+## [2.13.5](https://github.com/codesandbox/sandpack/compare/v2.13.4...v2.13.5) (2024-02-28)
+
+### Bug Fixes
+
+- make sure to unregister all clients when "user-visible" option is out of viewport ([#1098](https://github.com/codesandbox/sandpack/issues/1098)) ([230960c](https://github.com/codesandbox/sandpack/commit/230960c1dafd74d7e5e578865cb0b27526152e07))
+
+## [2.13.4](https://github.com/codesandbox/sandpack/compare/v2.13.3...v2.13.4) (2024-02-27)
+
+### Bug Fixes
+
+- update intersection callback ref every time prop change ([#1096](https://github.com/codesandbox/sandpack/issues/1096)) ([4fb3d7c](https://github.com/codesandbox/sandpack/commit/4fb3d7c5a8ba701f30fa0506eb27c246d4197de8))
+
+## [2.13.3](https://github.com/codesandbox/sandpack/compare/v2.13.2...v2.13.3) (2024-02-27)
+
+### Bug Fixes
+
+- investigating scroll issue ([#1094](https://github.com/codesandbox/sandpack/issues/1094)) ([b994287](https://github.com/codesandbox/sandpack/commit/b994287a5ffc0b3a6bdcb7f857a46f34e97ed039))
+
+## [2.13.2](https://github.com/codesandbox/sandpack/compare/v2.13.1...v2.13.2) (2024-02-24)
+
+### Bug Fixes
+
+- **compile opts:** don't overwrite default properties ([#1090](https://github.com/codesandbox/sandpack/issues/1090)) ([2877fcf](https://github.com/codesandbox/sandpack/commit/2877fcf46be7579a20d793b5ebb746e63622fb74))
+
+## [2.13.1](https://github.com/codesandbox/sandpack/compare/v2.13.0...v2.13.1) (2024-02-23)
+
+### Bug Fixes
+
+- **timeout:** clear it when there is a syntax error ([#1087](https://github.com/codesandbox/sandpack/issues/1087)) ([6777c24](https://github.com/codesandbox/sandpack/commit/6777c241f2d04b709e778543fe4afd9f79d3b514))
+
+# [2.13.0](https://github.com/codesandbox/sandpack/compare/v2.12.1...v2.13.0) (2024-02-22)
+
+**Note:** Version bump only for package @codesandbox/sandpack-react
+
+## [2.12.1](https://github.com/codesandbox/sandpack/compare/v2.12.0...v2.12.1) (2024-02-12)
+
+### Bug Fixes
+
+- Theme state logic to account for non-prefers-color-scheme usage ([#1082](https://github.com/codesandbox/sandpack/issues/1082)) ([3fcd51d](https://github.com/codesandbox/sandpack/commit/3fcd51d1f1cae45030d1903a419fae3f7af0367d))
+
+# [2.12.0](https://github.com/codesandbox/sandpack/compare/v2.11.3...v2.12.0) (2024-02-05)
+
+### Features
+
+- sandpack template type ([#1075](https://github.com/codesandbox/sandpack/issues/1075)) ([db8eba7](https://github.com/codesandbox/sandpack/commit/db8eba7d7810896948e29067ac6606388e31c5e2))
+
+## [2.11.3](https://github.com/codesandbox/sandpack/compare/v2.11.2...v2.11.3) (2024-01-17)
+
+### Bug Fixes
+
+- Update CodeMirror View when autoReload changed ([#1059](https://github.com/codesandbox/sandpack/issues/1059)) ([782c0c7](https://github.com/codesandbox/sandpack/commit/782c0c713af7e4c8181236c128b7df7ec6c6433a))
+
+## [2.11.2](https://github.com/codesandbox/sandpack/compare/v2.11.1...v2.11.2) (2024-01-11)
+
+**Note:** Version bump only for package @codesandbox/sandpack-react
+
+## [2.11.1](https://github.com/codesandbox/sandpack/compare/v2.11.0...v2.11.1) (2024-01-10)
+
+**Note:** Version bump only for package @codesandbox/sandpack-react
+
+# [2.11.0](https://github.com/codesandbox/sandpack/compare/v2.10.0...v2.11.0) (2024-01-03)
+
+### Features
+
+- Added showResetButton prop ([#1044](https://github.com/codesandbox/sandpack/issues/1044)) ([d7c2679](https://github.com/codesandbox/sandpack/commit/d7c2679fbc61dee6d486cb6d4ec33a77a8f30589))
+- improve system color scheme support and documentation ([#1050](https://github.com/codesandbox/sandpack/issues/1050)) ([23d513c](https://github.com/codesandbox/sandpack/commit/23d513cf9f81e240053768084178ce2e850711b3))
+
 # [2.10.0](https://github.com/codesandbox/sandpack/compare/v2.9.0...v2.10.0) (2023-11-15)
 
 ### Features

@@ -3,6 +3,54 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.13.8](https://github.com/codesandbox/sandpack/compare/v2.13.7...v2.13.8) (2024-04-11)
+
+### Bug Fixes
+
+- force new release ([#1118](https://github.com/codesandbox/sandpack/issues/1118)) ([5b38b37](https://github.com/codesandbox/sandpack/commit/5b38b372de2d9ff26967fec1e22c772c755a0d33))
+
+## [2.13.7](https://github.com/codesandbox/sandpack/compare/v2.13.6...v2.13.7) (2024-03-26)
+
+### Bug Fixes
+
+- Fixed sandpackNode initializing failure ([#1105](https://github.com/codesandbox/sandpack/issues/1105)) ([26685d9](https://github.com/codesandbox/sandpack/commit/26685d92973ab609bae03dadca4d7f21c1fd696c))
+
+## [2.13.6](https://github.com/codesandbox/sandpack/compare/v2.13.5...v2.13.6) (2024-03-25)
+
+### Bug Fixes
+
+- **pro:** use partitioned cookie for sandpack authentication ([#1110](https://github.com/codesandbox/sandpack/issues/1110)) ([2950186](https://github.com/codesandbox/sandpack/commit/29501863c2ebbcbf64fb9e7080feed1f2bc724b5))
+
+## [2.13.2](https://github.com/codesandbox/sandpack/compare/v2.13.1...v2.13.2) (2024-02-24)
+
+### Bug Fixes
+
+- **compile opts:** don't overwrite default properties ([#1090](https://github.com/codesandbox/sandpack/issues/1090)) ([2877fcf](https://github.com/codesandbox/sandpack/commit/2877fcf46be7579a20d793b5ebb746e63622fb74))
+
+# [2.13.0](https://github.com/codesandbox/sandpack/compare/v2.12.1...v2.13.0) (2024-02-22)
+
+### Features
+
+- Add spread operator for options in runtime client ([#1086](https://github.com/codesandbox/sandpack/issues/1086)) ([b7c7551](https://github.com/codesandbox/sandpack/commit/b7c7551472e42723a70db7cbf7af853810dfd9d3))
+
+# [2.12.0](https://github.com/codesandbox/sandpack/compare/v2.11.3...v2.12.0) (2024-02-05)
+
+### Features
+
+- sandpack template type ([#1075](https://github.com/codesandbox/sandpack/issues/1075)) ([db8eba7](https://github.com/codesandbox/sandpack/commit/db8eba7d7810896948e29067ac6606388e31c5e2))
+
+## [2.11.2](https://github.com/codesandbox/sandpack/compare/v2.11.1...v2.11.2) (2024-01-11)
+
+### Bug Fixes
+
+- bump codesandbox-client and test new publish script ([#1056](https://github.com/codesandbox/sandpack/issues/1056)) ([1736185](https://github.com/codesandbox/sandpack/commit/173618538584f11426c7b2156243bc1691303696))
+
+## [2.11.1](https://github.com/codesandbox/sandpack/compare/v2.11.0...v2.11.1) (2024-01-10)
+
+### Bug Fixes
+
+- add `allow-downloads` to iframes ([#1054](https://github.com/codesandbox/sandpack/issues/1054)) ([c038e13](https://github.com/codesandbox/sandpack/commit/c038e1322bbca94ea529f7a92089ad0f605d1ba5))
+
 # [2.10.0](https://github.com/codesandbox/sandpack/compare/v2.9.0...v2.10.0) (2023-11-15)
 
 ### Features

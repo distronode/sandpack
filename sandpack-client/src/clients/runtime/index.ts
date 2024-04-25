@@ -82,7 +82,7 @@ export class SandpackRuntime extends SandpackClient {
     if (!this.iframe.getAttribute("sandbox")) {
       this.iframe.setAttribute(
         "sandbox",
-        "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+        "allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts allow-downloads allow-pointer-lock"
       );
 
       this.iframe.setAttribute(
@@ -229,6 +229,7 @@ export class SandpackRuntime extends SandpackClient {
     );
 
     this.dispatch({
+      ...this.options,
       type: "compile",
       codesandbox: true,
       version: 3,
